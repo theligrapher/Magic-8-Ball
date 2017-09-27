@@ -1,0 +1,17 @@
+import random
+ 
+ def main ():
+        question = raw_input("What is your question?")
+        EightBall = ["Yes", "No", "Probably not", "Who knows? Not me", "Without a doubt!", "34", "Hmmm...there's a chance.", "Why would you even ask that questions?"]
+        i = random.randint(0, 8)
+        print(EightBall[i])
+        newquestion()
+       
+def newquestion():
+        yn = input("Try again?")
+        ynLower = yn.lower()
+        if ynLower == "y" or ynLower == "yes" or ynLower == "yea":
+                main()
+        else ynLower == "n" or ynLower == "no" or ynLower == "nope" :
+                print("Thanks for playing!")
+                quit()
